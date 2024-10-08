@@ -1,7 +1,85 @@
 *{
-    width: auto;
-    left: auto;
+    font-family: "Roboto", sans-serif;
     
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
 
+header{
+    background-color: rgb(1, 1, 1);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    height: 130px;
+    box-shadow: 0 4px 6px rgba(205, 9, 9, 0.8);
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+nav ul li{
+margin: 0 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: red;
+    font-weight: 700;
+    font-size: large;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    
+  
+}
+
+nav ul li a:hover{
+    font-weight: 800 ;
+    color: black;
+    transition: 50ms;
+    background-color: red;
+
+}
+
+.car-showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+.car-info{
+    height: 300px;
+    width: 100px;
+
+}
+}
+
+.reserve-process-overview{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
