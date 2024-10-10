@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
+    <header>
+        <img src="Logo.png" alt="WebLogo">
+        <nav>
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="login">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="emri">Emri juaj</label>
+            <input type="text" name="emri" placeholder="Please enter your name">
+            <label for="mbiemri">Mbiemri juaj</label>
+            <input type="text" name="mbiemri" placeholder="Please enter your lastname">
+         <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Please enter your email">
+        <label for="password">Password</label>
+        <input type="text" name="text" required>
     
+
+        <button class="button">Sign in</button>
+
+        </form>
+        </section>
+    </main>
 </body>
 </html>
