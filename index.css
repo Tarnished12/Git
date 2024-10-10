@@ -24,9 +24,9 @@ nav{
 }
 
 header img{
-    height: 130px;
+    max-width: 5%;
+    max-height: 5%;
     box-shadow: 0 4px 6px rgba(205, 9, 9, 0.8);
-    
 }
 
 nav ul{
@@ -53,9 +53,9 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+    
     font-weight: 800 ;
     color: black;
-    transition: 50ms;
     background-color: red;
 
 }
@@ -67,6 +67,8 @@ nav ul li a:hover{
     height: 90vh;
     position: relative;
     overflow: hidden;
+    justify-content: space-between;
+   
 }
 
 
@@ -80,16 +82,41 @@ height: 100%;
 transform-origin: bottom;
 background-color: rgb(169, 46, 46);
 z-index: -1;
+
 }
 
 .car-showcase::before{
     right: 60%;
-    transform: skewY(-5deg) 
+    transform: skewx(-5deg)
+     
 }
 
 .car-showcase::after{
     left: 50%;
-    transform: skewY(-5deg) 
+    transform: skewx(-5deg)
+}
+
+
+
+.car-img{
+  height: 400px;
+  width: 400px;
+ 
+  margin-right: 150px;
+  
+
+}
+.car-showcase img{
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 50%;
+    max-height: 50%;
+   
+}
+
+.car-showcase img:hover{
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
 }
 
 .car-info{
@@ -97,12 +124,15 @@ z-index: -1;
     background-color: white;
     text-align: center;
     padding: 70px;
-    margin-right: 40px;
+    margin-left: 40px;
     flex-direction: column;
     border-radius: 20px;
-    max-width: 20%; 
+    max-width: 20%;
+    float: left; 
+    display: flex;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    
 }
-
 .car-info h1{
     font-size: 40px;
     font-weight: 700;
@@ -127,25 +157,74 @@ z-index: -1;
 }
 
 .car-info button:hover{
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
     background-color: black;
     color: white;
-    transition: 50ms;
-    font-weight: 1000;
-    font-size: 30px;
-}
-
-.car-showcase img{
-    max-width: 50%;
-    max-height: 50%;
-
-}
-
-.carport-txt{
-    position: relative;
-    padding: 10px;
-    margin-top: 200px;
-
-   
     
+}
+
+.reserve-process-overview{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 16px;
+    margin-bottom: 10px;
+    padding: 16px;
+    
+}
+.reserve-process{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    background-color: red;
+}
+
+.reserve-process:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.reserve-process .icon img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.reserve-process h3{
+    margin:8px 0 ;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+     
+}
+.reserve-process h3 a{
+   text-decoration: none;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+
 
 }
+
+.reserve-process h3:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+      
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.reserve-process p{
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: -20px;
+
+}
+
+
