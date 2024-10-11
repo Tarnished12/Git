@@ -6,11 +6,13 @@
 body{
     margin: 0;
     padding: 0;
+  
 }
 
 header{
-    background-color: rgb(1, 1, 1);
-
+    background:url(nav.png);
+    background-size: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     padding: 20px;
     justify-content: space-between;
@@ -42,7 +44,7 @@ margin: 0 10px;
 
 nav ul li a{
     text-decoration: none;
-    color: red;
+    color: rgb(254, 254, 254);
     font-weight: 700;
     font-size: large;
     text-transform: uppercase;
@@ -68,6 +70,8 @@ nav ul li a:hover{
     position: relative;
     overflow: hidden;
     justify-content: space-between;
+    background:url(backcar4.jpg);
+    z-index: 1;
    
 }
 
@@ -80,14 +84,17 @@ top: 0;
 width: 100%;
 height: 100%;
 transform-origin: bottom;
+background: url();
 background-color: rgb(169, 46, 46);
 z-index: -1;
+
 
 }
 
 .car-showcase::before{
     right: 60%;
     transform: skewx(-5deg)
+    
      
 }
 
@@ -168,10 +175,14 @@ z-index: -1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #ffffff;
+    background-image: url(background.avif);
     padding: 16px;
     margin-bottom: 10px;
     padding: 16px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+   
+    
     
 }
 .reserve-process{
@@ -184,7 +195,8 @@ z-index: -1;
     border-radius: 10px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
-    background-color: red;
+    background-color: rgb(62, 52, 52);
+    opacity: 0.7;
 }
 
 .reserve-process:hover{
@@ -193,22 +205,23 @@ z-index: -1;
 }
 
 .reserve-process .icon img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
 }
 
 .reserve-process h3{
     margin:8px 0 ;
-    background: rgb(255, 255, 255);
+    background: rgb(84, 80, 80);
     border-radius: 5px;
     margin-top: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
      
 }
 .reserve-process h3 a{
    text-decoration: none;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    color: rgb(35, 16, 16);
 
 
 }
@@ -227,4 +240,126 @@ z-index: -1;
 
 }
 
+.statistics{
+    background:url(Stats.jpg);
+    padding: 50px 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.statistic:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+
+}
+ .section-header{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgb(43, 120, 182);
+    text-align: center;
+    opacity: 0.7;
+ }
+
+.section-description{
+    font-size: 25px;
+    margin-bottom: 50px;
+    gap: 30px;
+    text-align: center;
+    color: rgb(137, 137, 195);
+}
+
+.statistics-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.statistic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(128, 140, 186);
+    opacity: 0.5;
+}
+
+.statistic-number{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.statistic-txt{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-us{
+    position: relative;
+    height: 400px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.about-us .bkg-img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+   right: 0;
+   background: url(bkg.webp);
+z-index: -1;
+max-height: 50;
+}
+
+.about-us-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: #ccc;
+    border-radius: 10px;
+    opacity: 0.8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    overflow: hidden;
+}
+
+.video{
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background: blur(5px);
+    padding: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.video-content{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+.video-header{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.video-player{
+    position: relative;
+    padding-bottom: 55%;
+    height: 0;
+    overflow: hidden;
+    color: #fff;
+}
 
