@@ -62,29 +62,36 @@ nav ul li a:hover{
 
 }
 
-
-#login-form{
-    box-shadow: 5px 5px 10px rgba(146, 2, 2, 0.9);
-    margin:50px;
-    padding: 30px;
-    
-    margin-top: 50px;
-    background-color: white;
-    border-radius: 20px;
-    
-   
-    
-
+.login{
+    width: 50%;
+    align-items: center;
 }
-
 h1{
 text-align: center;
 color: black;
 margin-top: 30px;
 font-size: 30px;
 font-weight: 800;
+}
+#login-form{
+    box-shadow: 5px 5px 10px rgba(146, 2, 2, 0.9);
+    margin:50px;
+    padding: 30px;
+    display: flex;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 50%;
+    justify-content: center;
+    flex-direction: column;
+     align-items: center;
+    
 
 }
+
+
+
+
 
 label{
     display: block;
