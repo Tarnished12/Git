@@ -1,0 +1,45 @@
+main{
+    margin-top: 120px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-section{
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 60%;
+    display: inline-block;
+   
+    border-radius: 10px;
+
+}
+
+#garage-img{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    background-color: gray;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 60%;
+    width: 600px;
+    border-radius: 10px;
+}
+
+select{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    background-color: red;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cars.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+         
+        <nav>
+            <ul>
+                <li> <a href="login.html">Login</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                
+            </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="menu-section">
+            <img id="garage-img" src="garage.jpg" alt="Garage">
+            <h2>Menu</h2>
+            <select name="storage" id="storage" onchange="updateCarItems">
+                <option value="Lambo">Lambo</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Ferrari">Ferrari</option>
+            </select>
+            <input type="text" id="search" placeholder="Search car options">
+            <ul id="menu-items"></ul>
+        </section>
+
+        <section class="pay">
+            <h2>Add to basket</h2>
+            <ul id="basket-items"></ul>
+            <p id="basket-message">
+                Sorry you cant order yet.
+            </p>
+            <p>Subtotal <span id="subtotal-price">0.00</span></p>
+            <p>Vat(18%) <span id="tax-price">0.00</span></p>
+            <p>Total <span id="total-price">0.00</span></p>
+            <button id="Checkout">Pay</button>
+        </section>
+      </main>
+</body>
+</html>
