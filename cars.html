@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cars.css">
+    <script src="cars.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
       </header>
 
       <main>
-        <section class="menu-section">
+        <section class="car-section">
             <img id="garage-img" src="garage.jpg" alt="Garage">
             <h2>Menu</h2>
             <select name="storage" id="storage" onchange="updateCarItems">
@@ -28,7 +29,7 @@
                 <option value="Ferrari">Ferrari</option>
             </select>
             <input type="text" id="search" placeholder="Search car options">
-            <ul id="menu-items"></ul>
+            <ul id="car-items"></ul>
         </section>
 
         <section class="pay">
