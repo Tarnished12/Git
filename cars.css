@@ -112,9 +112,9 @@ input{
     border-radius: 10px;
 }
 
-.car-section ul{
+.car-section ul { 
     
-    display: block;
+    display: inline-block;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 10px;
@@ -123,7 +123,7 @@ input{
 
 .pay{
     display: block;
-     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
      border-radius: 5px;
      margin-top: -80px;
      width: 200px;

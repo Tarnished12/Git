@@ -65,12 +65,14 @@ function updateCarItems() {
         const addButton = document.createElement("button");
 
         name.textContent = item.name;
-        price.textContent = ` Eur  ${ item.price.toFixed(2)}`;
+        price.textContent = `Eur${item.price.toFixed(2)}`;
         description.textContent = `Description:  ${item.description}`;
         horsepower.textContent = `Horsepower: ${item.Horsepower}`;
         addButton.textContent = `+`;
         addButton.setAttribute("data-name", item.name);
         addButton.setAttribute("data-price", item.price.toFixed(2));
+
+        addButton.addEventListener("click", addToBasket);
         
         li.appendChild(name);
         li.appendChild(price);
@@ -110,3 +112,133 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", init);
 
+function addToBasket(event){
+    const itemName = event.target.getAttribute("data-name");
+    const itemPrice = parseFloat(event.target.getAttribute("data-price"));
+
+    const basketList = document.getElementById("basket-items");
+    const li = document.createElement("li");
+    const name = document.createElement("span");
+    const price = document.createElement("span");
+    const removeButton = document.createElement("button");
+    const addButton = document.createElement("button");
+     
+    name.textContent = itemName;
+    price.textContent = `Eur${ itemPrice.toFixed(2)}`;
+    removeButton.textContent = "-";
+    addButton.textContent = "+";
+    removeButton.classList.add("remove");
+    addButton.classList.add("add");
+    addButton.setAttribute("click", removeFromBasket);
+    addButton.setAttribute("click", addToBasket);
+
+    removeButton.addEventListener("click", removeFromBasket);
+    addButton.addEventListener("click", addToBasket);
+    
+    li.appendChild(name);
+    li.appendChild(price);
+    li.appendChild(removeButton);
+    li.appendChild(addButton);
+
+
+    basketList.appendChild(li);
+    
+    
+
+    checkMinimumOrder();
+}
+
+function removeFromBasket(){
+    event.target.parentElement.remove();
+
+    calculateTotal();
+    checkMinimumOrder();
+}
+
+function calculateTotal(){
+    const basketItems = document.querySelectorAll("#basket-items li");
+    let subtotal = 0;
+    let tax = 0;
+    let total = 0;
+    const taxRate = 0.1;
+
+    basketItems.forEach((item)=>{
+        const itemPrice = parseFloat(
+            item.querySelector("span:nth-child(2)").textContent.slice(1)
+        );
+        subtotal += itemPrice;
+    });
+
+    tax = subtotal * taxrate;
+    total = subtotal + tax;
+
+    document.querySelector("#subtotal-price").textContent = `Eur${subtotal.toFixed(2)}`;
+    document.querySelector("#tax-price").textContent = `Eur${tax.toFixed(2)}`;
+    document.querySelector("totali-price").textContent = `Eur${total.toFixed(2)}`;
+}
+
+function checkMinimumOrder() {
+
+const basketItems = document.querySelectorAll("#basket-items li");
+let subtotal = 0;
+
+basketItems.forEach((item)=>{
+    const itemPrice = parseFloat(
+        item.querySelector("span:nth-child(2)").textContent.slice(1)
+    );
+    subtotal += itemPrice;
+});
+
+const MinimumOrderValue = 20.0;
+
+const basketMessage = document.getElementById("basket-message");
+if (subtotal < MinimumOrderValue) {
+    basketMessage.style.display = "block";
+} else{
+    basketMessage.style.display = "none";
+}
+}
+checkMinimumOrder();
+
+const car = document.getElementById("car");
+car.addEventListener("change", updateCarItems);
+
+updateCarItems();
+
+function calculateTotal() {
+    const basketItems = document.querySelectorAll("#basket-items li");
+    let subtotal = 0;
+    let tax = 0;
+    let total = 0;
+    const taxRate = 0.1;
+    
+    basketItems.forEach((item) => {
+        const itemPrice = parseFloat(
+          item.querySelector("span:nth-child(2)").textContent.slice(3)
+        );
+        subtotal += itemPrice;
+      });
+     
+      tax = subtotal * taxRate;
+      total = subtotal + tax;
+
+    document.querySelector("#subtotal-price").textContent = `Eur${subtotal.toFixed(2)}`;
+    document.querySelector("#tax-price").textContent = `Eur${tax.toFixed(2)}`;
+    document.querySelector("total-price").textContent = `Eur${total.toFixed(2)}`;
+
+}
+
+const basketList = document.getElementById("basket-items");
+basketList.addEventListener("clikc", (event) =>{
+    if(
+        event.target.classList.contain("add") ||
+        event.target.classList.contain("remove")
+
+    ){
+        calculateTotal
+    }
+})
+
+
+
+ 

@@ -212,10 +212,12 @@ z-index: -1;
 
 .reserve-process h3{
     margin:8px 0 ;
-    background: rgb(201, 163, 163);
+    background: transparent;
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     margin-top: 20px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    
      
 }
 .reserve-process h3 a{
@@ -534,6 +536,7 @@ margin-bottom: 16px;
 
 .footer-column p{
     text-align: left;
+    
 }
 
 .social-media-icons{

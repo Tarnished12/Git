@@ -12,8 +12,9 @@
          
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li> <a href="login.html">Login</a></li>
-                <li><a href="cars.html">Cars</a></li>
+                
                 
             </ul>
         </nav>
@@ -25,9 +26,9 @@
             <img id="garage-img" src="garage.jpg" alt="Garage">
             <h2>Menu</h2>
             <select name="storage" id="car" onchange="updateCarItems()">
-                <option value="Lambo">Lambo</option>
-                <option value="Porsche">Porsche</option>
-                <option value="Ferrari">Ferrari</option>
+                <option value="Lambo" id="Lambo">Lambo</option>
+                <option value="Porsche" id="Porsche">Porsche</option>
+                <option value="Ferrari" id="Ferrari">Ferrari</option>
             </select>
             <input type="text" id="search" placeholder="Search car options">
             <ul id="car-items"></ul>
