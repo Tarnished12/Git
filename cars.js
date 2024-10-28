@@ -131,6 +131,8 @@ function addToBasket(event){
     addButton.classList.add("add");
     addButton.setAttribute("click", removeFromBasket);
     addButton.setAttribute("click", addToBasket);
+    addButton.setAttribute("data-name", itemName);
+    addButton.setAttribute("data-price", itemPrice)
 
     removeButton.addEventListener("click", removeFromBasket);
     addButton.addEventListener("click", addToBasket);
@@ -144,7 +146,7 @@ function addToBasket(event){
     basketList.appendChild(li);
     
     
-
+     calculateTotal();
     checkMinimumOrder();
 }
 
@@ -174,7 +176,7 @@ function calculateTotal(){
 
     document.querySelector("#subtotal-price").textContent = `Eur${subtotal.toFixed(2)}`;
     document.querySelector("#tax-price").textContent = `Eur${tax.toFixed(2)}`;
-    document.querySelector("totali-price").textContent = `Eur${total.toFixed(2)}`;
+    document.querySelector("#totali-price").textContent = `Eur${total.toFixed(2)}`;
 }
 
 function checkMinimumOrder() {
@@ -224,12 +226,12 @@ function calculateTotal() {
 
     document.querySelector("#subtotal-price").textContent = `Eur${subtotal.toFixed(2)}`;
     document.querySelector("#tax-price").textContent = `Eur${tax.toFixed(2)}`;
-    document.querySelector("total-price").textContent = `Eur${total.toFixed(2)}`;
+    document.querySelector("#total-price").textContent = `Eur${total.toFixed(2)}`;
 
 }
 
 const basketList = document.getElementById("basket-items");
-basketList.addEventListener("clikc", (event) =>{
+basketList.addEventListener("click", (event) =>{
     if(
         event.target.classList.contain("add") ||
         event.target.classList.contain("remove")

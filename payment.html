@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="login.html">Login</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+      </header>
+    <section class="payment-form">
+        <h2>Payment plan</h2>
+        <form>
+            <label for="emri">Name on the card</label>
+            <input type="text" name="emri" placeholder="Name on the card">
+
+            <label for="email">Card Number</label>
+            <input type="number" name="card-number" required>
+
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" required>
+
+            <label for="expiration-date">Expiration Date</label>
+            <input type="datetime-local" name="expiration-date" required>
+
+        <button type="submit">Pay</button>
+        </form>
+    </section>
+</body>
+</html>

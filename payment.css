@@ -1,18 +1,11 @@
-*{
-    font-family: "Roboto", sans-serif;
-    
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-    
+*body{
+    width: auto;
 }
 
 header{
-    background-color: rgb(1, 1, 1);
-
+    background:url(navi.webp);
+    background-size: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     padding: 20px;
     justify-content: space-between;
@@ -26,9 +19,9 @@ nav{
 }
 
 header img{
-    height: 130px;
+    max-width: 5%;
+    max-height: 5%;
     box-shadow: 0 4px 6px rgba(205, 9, 9, 0.8);
-    
 }
 
 nav ul{
@@ -44,7 +37,7 @@ margin: 0 10px;
 
 nav ul li a{
     text-decoration: none;
-    color: red;
+    color: rgb(254, 254, 254);
     font-weight: 700;
     font-size: large;
     text-transform: uppercase;
@@ -55,14 +48,13 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+    
     font-weight: 800 ;
     color: black;
-    transition: 50ms;
     background-color: red;
 
 }
-
-.login-form{
+.payment-form{
     display: flex;
     text-align: center;
     margin-bottom: 20px;
@@ -70,13 +62,13 @@ nav ul li a:hover{
 
 }
 
-.login-form h2{
+.payment-form h2{
     margin:40px 0 ;
     font-size: 40px;
     color: #000000;
 }
 
-.login-form form{
+.payment-form form{
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -85,15 +77,34 @@ nav ul li a:hover{
     padding: 60px;
     width: 50%;
     align-self: center;
+    
 }
 
-.login-form form label{
-    font-size: 18px;
+.payment-form form label{
+    font-size: 28px;
     display: block;
     margin-bottom: 10px;
+    
 }
 
-.login-form form input{
+
+.payment-form form input:focus{
+    outline: none;
+    border: solid 2px #000000;
+}
+
+.payment-form form button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 100%;
+    
+}
+.payment-form form input{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -104,24 +115,8 @@ nav ul li a:hover{
     box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
 
 }
-.login-form form input:focus{
-    outline: none;
-    border: solid 2px #000000;
-}
 
-.login-form form button{
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 0;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    max-width: 100%
-    
-}
-
-.login-form form button:hover{
+.payment-form form button:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease;
 }

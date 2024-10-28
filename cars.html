@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    
     <header>
          
         <nav>
@@ -23,8 +25,8 @@
       <main>
         <section class="car-section">
             <h1>Our Cars</h1>
-            <img id="garage-img" src="garage.jpg" alt="Garage">
-            <h2>Menu</h2>
+            
+          
             <select name="storage" id="car" onchange="updateCarItems()">
                 <option value="Lambo" id="Lambo">Lambo</option>
                 <option value="Porsche" id="Porsche">Porsche</option>
@@ -45,7 +47,7 @@
             <p>Subtotal <span id="subtotal-price">0.00</span></p>
             <p>Vat(18%) <span id="tax-price">0.00</span></p>
             <p>Total <span id="total-price">0.00</span></p>
-            <button id="Checkout">Pay</button>
+            <a href="payment.html"><button class="modern-button">Pay</button></a>
         </section>
       
     
