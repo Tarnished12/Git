@@ -83,8 +83,9 @@ nav ul li a:hover{
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     padding: 60px;
-    width: 50%;
-    align-self: center;
+    width: 30%;
+    
+    align-self: center
 }
 
 .login-form form label{

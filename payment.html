@@ -21,20 +21,22 @@
     <section class="payment-form">
         <h2>Payment plan</h2>
         <form>
-            <label for="emri">Name on the card</label>
-            <input type="text" name="emri" placeholder="Name on the card">
+            <label for="name">Name on the card</label>
+            <input type="text" name="name" placeholder="Name on the card">
 
-            <label for="email">Card Number</label>
+            <label for="card-number">Card Number</label>
             <input type="number" name="card-number" required>
 
             <label for="cvc">CVC</label>
             <input type="number" name="cvc" required>
 
             <label for="expiration-date">Expiration Date</label>
-            <input type="datetime-local" name="expiration-date" required>
+            <input type="datetime-local`" name="expiration-date" required>
 
-        <button type="submit">Pay</button>
+        <button type="submit" id="pay-button">Pay</button>
         </form>
     </section>
+
+    <script src="payment.js"></script>
 </body>
 </html>
